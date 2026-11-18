@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7faf7;
+    color: #24352b;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+header h2 {
+    color: #16834b;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+button, .btn {
+    background: #16834b;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .btn:hover {
+    background: #0d6035;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background:
+        linear-gradient(90deg, rgba(0,45,25,.88), rgba(0,0,0,.25)),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1600");
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.secondary {
+    background: white;
+    color: #16834b;
+    margin-left: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: #e2f4e8;
+    padding: 35px 10px;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #16834b;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.donate-section, .food-section, .about {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.donate-section h2, .food-section h2, .about h2 {
+    font-size: 30px;
+    color: #16834b;
+    margin-bottom: 12px;
+}
+
+.donate-section > p, .food-section > p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ddd;
+    display: grid;
+    gap: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #16834b;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+form button {
+    font-size: 16px;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #16834b;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    max-width: 750px;
+    margin: 25px auto;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.food-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 3px 15px #ddd;
+}
+
+.food-card h3 {
+    color: #16834b;
+    margin-bottom: 12px;
+}
+
+.food-card p {
+    margin: 9px 0;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.food-card button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.food-card button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.steps div {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+}
+
+.steps span {
+    font-size: 40px;
+}
+
+.steps h3 {
+    margin: 15px 0;
+    color: #16834b;
+}
+
+.steps p {
+    color: #666;
+    line-height: 1.5;
+}
+
+footer {
+    background: #143b29;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+    line-height: 2;
+}
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+}
